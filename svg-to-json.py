@@ -35,6 +35,19 @@ def get_attribute_value(element, attribute):
     return
 
 
+def exclude_none(value):
+    if isinstance(value, list):
+        return [exclude_none(x) for x in value if x is not None]
+    elif isinstance(value, dict):
+        return {
+            key: exclude_none(val)
+            for key, val in value.items()
+            if val is not None
+        }
+    else:
+        return value
+
+
 def main():
     if len(sys.argv) < 2:
         print(u'Usage: python svg-to-json.py [input] [output]')
@@ -47,7 +60,7 @@ def main():
         output[os.path.splitext(os.path.basename(file))[0]] = parse(file)
 
     with open(sys.argv[2], "w") as outfile:
-        outfile.write(json.dumps(output, indent=2))
+        outfile.write(json.dumps(exclude_none(output), indent=2, allow_nan=False))
 
 
 if __name__ == '__main__':
