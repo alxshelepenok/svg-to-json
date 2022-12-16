@@ -1,9 +1,11 @@
 # svg-to-json
 
+Transform SVG files to JSON notation.
+
 ## Usage
 
-```
-    python svg-to-json.py [input] [output]'
+```bash
+python svg-to-json.py [input] [output]
 ```
 
 ## Output
