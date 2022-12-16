@@ -11,52 +11,26 @@ python svg-to-json.py [input] [output]
 ## Output
 
 ```json
-[
-  {
-    "viewBox": "0 0 24 24",
-    "height": "24",
-    "width": "24",
-    "fill": "none",
-    "objects": [
-      {
-        "d": "M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z",
-        "attributes": {
-          "stroke": "#1A202C",
-          "strokeWidth": "1.5",
-          "strokeLinecap": "round",
-          "strokeLinejoin": "round"
-        }
-      },
-      {
-        "d": "M3 21V19C3 17.9391 3.42143 16.9217 4.17157 16.1716C4.92172 15.4214 5.93913 15 7 15H11C12.0609 15 13.0783 15.4214 13.8284 16.1716C14.5786 16.9217 15 17.9391 15 19V21",
-        "attributes": {
-          "stroke": "#1A202C",
-          "strokeWidth": "1.5",
-          "strokeLinecap": "round",
-          "strokeLinejoin": "round"
-        }
-      },
-      {
-        "d": "M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88",
-        "attributes": {
-          "stroke": "#1A202C",
-          "strokeWidth": "1.5",
-          "strokeLinecap": "round",
-          "strokeLinejoin": "round"
-        }
-      },
-      {
-        "d": "M21 21V19C20.9949 18.1172 20.6979 17.2608 20.1553 16.5644C19.6126 15.868 18.8548 15.3707 18 15.15",
-        "attributes": {
-          "stroke": "#1A202C",
-          "strokeWidth": "1.5",
-          "strokeLinecap": "round",
-          "strokeLinejoin": "round"
-        }
-      }
-    ]
-  }
-]
+{
+    "heart": {
+        "viewBox": "0 0 24 24",
+        "height": "24",
+        "width": "24",
+        "fill": "none",
+        "objects": [
+            {
+                "d": "M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z",
+                "attributes": {
+                    "fill": "#1A202C",
+                    "stroke": null,
+                    "strokeWidth": null,
+                    "strokeLinecap": null,
+                    "strokeLinejoin": null
+                }
+            }
+        ]
+    }
+}
 ```
 
 ## License

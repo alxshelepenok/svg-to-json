@@ -17,6 +17,7 @@ def parse(svg_file):
         output['objects'].append({
             'd': get_attribute_value(node, 'd'),
             'attributes': {
+                'fill': get_attribute_value(node, 'fill'),
                 'stroke': get_attribute_value(node, 'stroke'),
                 'strokeWidth': get_attribute_value(node, 'stroke-width'),
                 'strokeLinecap': get_attribute_value(node, 'stroke-linecap'),
@@ -39,11 +40,11 @@ def main():
         print(u'Usage: python svg-to-json.py [input] [output]')
         return
 
-    output = []
+    output = {}
     files = [y for x in os.walk(sys.argv[1]) for y in glob(os.path.join(x[0], '*.svg'))]
 
     for file in files:
-        output.append(parse(file))
+        output[os.path.splitext(os.path.basename(file))[0]] = parse(file)
 
     with open(sys.argv[2], "w") as outfile:
         outfile.write(json.dumps(output, indent=2))
