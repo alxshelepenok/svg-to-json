@@ -18,6 +18,8 @@ def parse(svg_file):
             'd': get_attribute_value(node, 'd'),
             'attributes': {
                 'fill': get_attribute_value(node, 'fill'),
+                'fillRule': get_attribute_value(node, 'fill-rule'),
+                'clipRule': get_attribute_value(node, 'clip-rule'),
                 'stroke': get_attribute_value(node, 'stroke'),
                 'strokeWidth': get_attribute_value(node, 'stroke-width'),
                 'strokeLinecap': get_attribute_value(node, 'stroke-linecap'),
